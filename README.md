@@ -67,7 +67,7 @@ The major points are:
 
 ### Stash
 
-Coming soon!
+Test edit
 
 ### GitHub
 
