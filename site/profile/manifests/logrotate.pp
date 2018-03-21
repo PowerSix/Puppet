@@ -7,5 +7,4 @@ class profile::logrotate {
       compress => true,
     }
   }
-
 }
