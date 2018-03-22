@@ -5,7 +5,7 @@ class role::iis_webserver {
     ip => '52.49.69.27',
   }
 
-  $iisfeatures = ['Web-WebServer','Web-Scripting-Tools']
+  $iisfeatures = ['Web-WebServer','Web-Scripting-Tools','Web-Mgmt-Console']
 
   iis_feature { $iisfeatures:
     ensure => 'present',
