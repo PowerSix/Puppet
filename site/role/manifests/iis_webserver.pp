@@ -2,9 +2,9 @@ class role::iis_webserver {
   include profile::mps_host
   include profile::website_content
 
-  $IIS_Features = ['Web-WebServer','Web-Scripting-Tools']
+  $iisfeatures = ['Web-WebServer','Web-Scripting-Tools']
 
-  iis_feature { $IIS_Features:
+  iis_feature { $iisfeatures:
     ensure => 'present',
   } ->
 
@@ -20,13 +20,13 @@ class role::iis_webserver {
     path   => 'c:\\inetpub\\minimal',
   }
 
-  $Content = "Hello, World!
+  $content = "Hello, World!
 
     IIS 7.5 or whatever ;-)
     "
 
   file { 'c:\\inetpub\\minimal\\index.html':
     ensure  => 'present',
-    content => $Content,
+    content => $content,
   }
 }
