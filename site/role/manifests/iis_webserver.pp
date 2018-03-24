@@ -18,7 +18,7 @@ class role::iis_webserver {
     require         => File['minimal'],
     bindings        => [
       {
-        'bindinginformation' => '*:80:',
+        'bindinginformation' => '*:8080:',
         'protocol'           => 'http',
       },
     ],
