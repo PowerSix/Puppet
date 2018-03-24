@@ -16,7 +16,12 @@ class role::iis_webserver {
     physicalpath    => 'c:\\inetpub\\minimal',
     applicationpool => 'DefaultAppPool',
     require         => File['minimal'],
-    port            => '8080'
+    bindings        => [
+      {
+        'bindinginformation' => '*:80:',
+        'protocol'           => 'http',
+      },
+    ],
   }
 
   file { 'minimal':
