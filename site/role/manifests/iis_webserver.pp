@@ -34,4 +34,5 @@ class role::iis_webserver {
   file { '%SystemDrive%\\inetpub\\wwwroot\\index.htm':
     ensure  => 'present',
     content => "Test content",
+  }
 }
