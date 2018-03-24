@@ -36,7 +36,7 @@ class role::iis_webserver {
     content => $content,
   }
 
-  file { '%SystemDrive%\\inetpub\\wwwroot\\index.htm':
+  file { 'C:\\inetpub\\wwwroot\\index.htm':
     ensure  => 'present',
     content => "Test content",
   }
