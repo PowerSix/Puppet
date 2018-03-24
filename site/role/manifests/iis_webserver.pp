@@ -16,6 +16,7 @@ class role::iis_webserver {
     physicalpath    => 'c:\\inetpub\\minimal',
     applicationpool => 'DefaultAppPool',
     require         => File['minimal'],
+    port            => '8080'
   }
 
   file { 'minimal':
@@ -23,13 +24,14 @@ class role::iis_webserver {
     path   => 'c:\\inetpub\\minimal',
   }
 
-  $content = "Hello, World!
+  $content = "Hello, World!\n\n\nIIS 10.0 or whatever ;-)"
 
-    IIS 7.5 or whatever ;-)
-    "
-
-  file { 'c:\\inetpub\\minimal\\index.html':
+  file { 'c:\\inetpub\\minimal\\index.htm':
     ensure  => 'present',
     content => $content,
   }
+
+  file { '%SystemDrive%\\inetpub\\wwwroot\\index.htm':
+    ensure  => 'present',
+    content => "Test content",
 }
