@@ -1,9 +1,7 @@
-class role::iis_webserver {
-  include profile::host_mps
+class role::windows_web_server {
+  include profile::windows_defaults
   include profile::website_content
-  # host { 'www.six.com':
-  #   ip => '52.49.69.27',
-  # }
+  # include profile::windows_web_defaults
 
   $iisfeatures = ['Web-WebServer','Web-Scripting-Tools','Web-Mgmt-Console']
 
@@ -29,7 +27,11 @@ class role::iis_webserver {
     path   => 'c:\\inetpub\\minimal',
   }
 
-  $content = "Hello, World!\n\n\nIIS 10.0 or whatever ;-)"
+  $content = @("CONTENT")
+    Hello, World!
+
+    Powered by IIS 10.0...
+    | CONTENT
 
   file { 'c:\\inetpub\\minimal\\index.htm':
     ensure  => 'present',
@@ -39,5 +41,14 @@ class role::iis_webserver {
   file { 'C:\\inetpub\\wwwroot\\index.htm':
     ensure  => 'present',
     content => "Test content",
+  }
+
+  $pp_role = @("CONTENT")
+    Windows web server.
+    | CONTENT
+
+  file { 'C:\\Users\\Administrator\\Desktop\\PuppetRole.txt':
+    ensure  => 'present',
+    content => $pp_role,
   }
 }
