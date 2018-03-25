@@ -1,9 +1,9 @@
 class role::iis_webserver {
-  include profile::host_mps
+  # include profile::host_mps
   include profile::website_content
-  # host { 'www.six.com':
-  #   ip => '52.49.69.27',
-  # }
+  host { 'www.six.com':
+    ip => '52.49.69.27',
+  }
 
   $iisfeatures = ['Web-WebServer','Web-Scripting-Tools','Web-Mgmt-Console']
 
