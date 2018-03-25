@@ -11,9 +11,10 @@ class profile::windows_defaults {
   user { 'Six':
     ensure     => present,
     comment    => 'Managed by Puppet'
-    groups     => ['Administrators'],
+    groups     => ['Users','Administrators'],
     membership => inclusive,
     password   => '1stPassword',
+    managehome => true,
   }
 
   $defaults_message = @("CONTENT")
