@@ -14,6 +14,11 @@ class role::windows_application_server {
     provider => 'chocolatey',
   }
 
+  package { 'awscli':
+    ensure   => latest,
+    provider => 'chocolatey',
+  }
+
   $pp_role = @("CONTENT")
     Windows application server.
     | CONTENT
