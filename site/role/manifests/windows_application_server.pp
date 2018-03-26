@@ -1,5 +1,6 @@
 class role::windows_application_server {
   include profile::windows_defaults
+  include registry
   include chocolatey
 
   # include profile::windows_application_defaults
