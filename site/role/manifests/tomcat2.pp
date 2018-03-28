@@ -1,6 +1,6 @@
 class role::tomcat2 {
   exec { 'install_choco':
-    command   => '$(Set-ExecutionPolicy Bypass -Scope Process -Force; start-transcript c:\\users\\administrator\\desktop\\transcript.txt; iex ((New-Object System.Net.WebClient).DownloadString(\'https://chocolatey.org/install.ps1\')))',
+    command   => '$(Set-ExecutionPolicy Bypass -Scope Process -Force; start-transcript c:\\users\\administrator\\desktop\\transcript.txt; iex ((New-Object System.Net.WebClient).DownloadString(\'https://chocolatey.org/install.ps1\')); exit 0)',
     provider  => powershell,
     logoutput => true,
   } ->
