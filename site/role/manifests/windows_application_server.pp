@@ -1,8 +1,7 @@
 class role::windows_application_server {
   include profile::windows_defaults
-  include profile::disable_uac
+  # include profile::disable_uac
   include chocolatey
-
   # include profile::windows_application_defaults
 
   package { 'notepadplusplus':
