@@ -3,7 +3,6 @@ class role::choco {
     command   => '$(iex ((New-Object System.Net.WebClient).DownloadString(\'https://chocolatey.org/install.ps1\')); Exit 0)',
     provider  => powershell,
     logoutput => true,
-	unless    => '$(Test-Path -Path C:\\ProgramData\\chocolatey\\bin\\choco.exe)',
-
- }
+    unless    => '$(Test-Path -Path C:\\ProgramData\\chocolatey\\bin\\choco.exe)',
+  }
 }
