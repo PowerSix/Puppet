@@ -1,5 +1,5 @@
 class role::chocolateytest {
   include profile::chocolatey
-  # include profile::googlechrome
-  # include profile::firefox
+  # include profile::choco_googlechrome
+  # include profile::choco_firefox
 }
