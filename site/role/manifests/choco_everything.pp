@@ -1,5 +1,5 @@
 class role::choco_everything {
-  include profile::chocolatey ->
+  include profile::chocolatey
   include profile::choco_awscli
   include profile::choco_firefox
   include profile::choco_googlechrome
