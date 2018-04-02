@@ -4,4 +4,8 @@ class role::choco_module_puppet {
     ensure   => installed,
     provider => 'chocolatey',
   }
+  package { '7zip':
+    ensure   => installed,
+    provider => 'chocolatey',
+  }
 }
