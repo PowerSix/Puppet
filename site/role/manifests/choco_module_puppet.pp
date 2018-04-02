@@ -1,7 +1,7 @@
 class role::choco_module_puppet {
   include chocolatey
-  $package = ['notepadplusplus', '7zip', 'awscli', 'pandoc']
-  package { $package:
+  $packages = ['notepadplusplus', '7zip', 'awscli', 'pandoc']
+  package { $packages:
     ensure   => installed,
     provider => 'chocolatey',
   }

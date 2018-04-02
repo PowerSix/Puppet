@@ -1,6 +1,7 @@
 class role::choco_module_geoff {
   include chocolatey
-  package { 'notepadplusplus':
+  $packages = ['notepadplusplus', '7zip', 'awscli', 'pandoc']
+  package { $packages:
     ensure   => installed,
     provider => 'chocolatey',
   }
