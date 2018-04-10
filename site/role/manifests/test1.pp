@@ -8,4 +8,5 @@ class role::test1 {
             -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager\n
             -Djava.util.logging.config.file=C:\\Program Files\\Apache Software Foundation\\tomcat\\apache-tomcat-8.5.12\\conf\\logging.properties\n
             -XX:MaxPermSize=256m",
+  }
 }
