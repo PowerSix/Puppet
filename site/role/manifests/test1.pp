@@ -1,4 +1,4 @@
-class role::tomcat {
+class role::test1 {
 
 include profile::choco
 package { 'jdk8':
