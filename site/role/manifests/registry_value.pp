@@ -3,7 +3,7 @@ class role::registry_value {
   service { 'plugplay':
     ensure => running,
     enable => true,
-  } ->
+  }
 
   registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Test\JvmMs':
     ensure => present,
