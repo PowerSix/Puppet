@@ -1,6 +1,6 @@
 class role::registry_value {
 
-  service { 'tomcat8':
+  service { 'plugplay':
     ensure => running,
     enable => true,
   } ->
@@ -9,7 +9,7 @@ class role::registry_value {
     ensure => present,
     type   => dword,
     data   => "256",
-    notify => Service['tomcat8'],
+    notify => Service['plugplay'],
   }
 
   registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Test\Options':
