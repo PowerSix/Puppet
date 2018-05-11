@@ -1,7 +1,8 @@
 class profile::install_msi {
   package { 'newrelic-infra':
-  ensure          => 'installed',
-  provider        => 'windows',
-  source          => 'https://download.newrelic.com/infrastructure_agent/windows/newrelic-infra.msi',
-  install_options => ['INSTALLDIR=C:\Program Files\New Relic','/S'],
+    ensure          => 'installed',
+    provider        => 'windows',
+    source          => 'https://download.newrelic.com/infrastructure_agent/windows/newrelic-infra.msi',
+    install_options => ['INSTALLDIR=C:\Program Files\New Relic','/S'],
+  }
 }
