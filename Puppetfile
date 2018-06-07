@@ -1,9 +1,10 @@
 forge "http://forge.puppetlabs.com"
 
 # Modules from the Puppet Forge
+mod "puppetlabs/stdlib" # Standard library of resources for Puppet modules
+mod "puppet/archive" # Compressed archive file download and extraction with native types/providers for Windows and Unix
 
 # Linux
-mod "puppetlabs/stdlib" # Standard library of resources for Puppet modules
 # mod "puppetlabs/concat"
 # mod "puppetlabs/ntp"
 # mod "puppet/staging"
