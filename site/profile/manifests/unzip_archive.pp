@@ -2,7 +2,7 @@ class profile::unzip_archive {
   archive { 'C:\QAS.zip':
     source       => 'https://s3-us-west-2.amazonaws.com/opsworks-installs/QAS.zip',
     extract      => true,
-    extract_path => "C:\\Program Files",
+    extract_path => "C:\\Program Files\\",
     creates      => "C:\\Program Files\\QAS",
   }
 }
