@@ -1,3 +1,3 @@
 class role::test {
-  include profile::install_msi
+  include profile::unzip_archive
 }

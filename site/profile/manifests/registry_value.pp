@@ -1,4 +1,4 @@
-class role::registry_value {
+class profile::registry_value {
 
   service { 'plugplay':
     ensure => running,
